@@ -1,0 +1,206 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: ui-monospace, SFMono-Regular, 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', monospace;
+  }
+  
+  body {
+    /* font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif; */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-neutral-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary-500 rounded;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary-600;
+}
+
+
+@layer components {
+  /* Organic Font Pattern Typography */
+  .heading-main {
+    @apply font-merriweather text-4xl md:text-5xl lg:text-6xl font-normal leading-tight;
+    @apply text-primary-800; /* Consistent organic green */
+  }
+  
+  .heading-section {
+    @apply font-merriweather text-2xl md:text-3xl lg:text-4xl font-normal leading-snug;
+    @apply text-primary-700;
+  }
+  
+  .heading-sub {
+    @apply font-montserrat text-lg md:text-xl lg:text-2xl font-medium leading-relaxed;
+    @apply text-primary-600;
+  }
+  
+  .body-text {
+    @apply font-poppins text-base md:text-lg leading-relaxed font-normal;
+    @apply text-organic-text; /* Consistent body text */
+  }
+  
+  .button-text {
+    @apply font-montserrat text-sm md:text-base font-medium tracking-wide;
+    @apply text-primary-700;
+  }
+  
+  .tagline-text {
+    @apply font-merriweather text-lg md:text-xl italic leading-relaxed;
+    @apply text-primary-600;
+  }
+  
+  .footer-text {
+    @apply font-poppins text-sm leading-normal;
+    @apply text-organic-text-light; /* Consistent footer text */
+  }
+
+  .btn-mono {
+    @apply font-mono uppercase tracking-wider text-sm px-6 py-3
+           border border-current
+           /* shadow-[6px_6px_0_theme(colors.emerald.400),-3px_-3px_0_transparent] */
+           /* hover:shadow-[6px_6px_0_theme(colors.emerald.400),-6px_-6px_0_transparent] */
+           transition-all duration-300 ease-out hover:translate-x-[-2px] hover:translate-y-[-2px];
+  }
+
+  /* tiny scroll-wiggle on hover, then settle */
+  .hover-scroll {
+    @apply inline-block transition-transform duration-200 ease-out hover:-translate-x-0.5 hover:translate-y-[-1px];
+  }
+}
+
+/* // Global Aninmations */
+/* 1️⃣  Prevents scrollbars during the wipe */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif; /* Updated to match PDF pattern */
+  @apply bg-organic-bg text-organic-text;
+  scroll-snap-type: y mandatory;
+}
+
+/* 2️⃣  The wipe overlay */
+.page-wipe {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(to top, #00e676, #00c853); /* green wipe */
+  z-index: 9999;
+  transform: translateY(100%);   /* starts below the viewport */
+  animation: wipeUp 0.8s ease-out forwards;
+}
+
+@keyframes wipeUp {
+  to {
+    transform: translateY(-100%); /* ends above the viewport */
+  }
+}
+
+@keyframes flap {
+  0%   { transform: perspective(400px) rotateX(-90deg); opacity: 0; }
+  100% { transform: perspective(400px) rotateX(0deg);   opacity: 1; }
+}
+/* Roll-up key-frame */
+@keyframes rollup {
+  from {
+    transform: translateY(100%) rotateX(60deg);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+@font-face {
+  font-family: 'Elyanor';
+  src: url('/fonts/elyanor/Elyanor-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Elyanor';
+  src: url('/fonts/elyanor/Elyanor-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Elyanor';
+  src: url('/fonts/elyanor/Elyanor-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Elyanor';
+  src: url('/fonts/elyanor/Elyanor-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@layer utilities {
+  .translate-z-0 {
+    transform: translateZ(0);   /* pulls the sleeve one layer forward */
+  }
+}
+@layer utilities {
+  @keyframes wipeUp {
+    to { transform: translateY(-100%); }
+  }
+}
+
+@keyframes circleGrow {
+  0% {
+    clip-path: circle(30% at 50% 100%);
+  }
+  100% {
+    clip-path: circle(150% at 50% 50%);
+  }
+}
+
+
+/* Puzzle clip-path ---------------------------------------------------- */
+@layer utilities {
+  .puzzle-clip {
+    clip-path: url(#puzzle-mask);
+  }
+}
+
+/* Hover reveal -------------------------------------------------------- */
+.puzzle-reveal {
+  transition: clip-path .4s ease;
+}
+.puzzle-reveal:hover {
+  clip-path: url(#puzzle-mask);
+}
+/* Tailwind-utility for clip-path */
+.transition-clip {
+  transition: clip-path 0.3s ease-in-out;
+}
