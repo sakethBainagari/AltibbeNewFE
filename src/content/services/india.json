@@ -1,0 +1,42 @@
+{
+  "hero": {
+    "title": "India Services",
+    "headline": "Empowering Indian Producers for Premium Global Markets",
+    "subtext": "Live transparency that strengthens exports and reduces rejection risks.",
+    "image": "/images/services/india_hero.jpg",
+    "accent": "gold"
+  },
+  "context": {
+    "title": "Strategic Context",
+    "paragraphs": [
+      "Premium markets demand advanced traceability and truthful claims.",
+      "Indian producers gain advantage when product information is structured, consistent, and accessible."
+    ]
+  },
+  "solution": {
+    "title": "How Hedamo Aligns",
+    "items": [
+      { "name": "Hedamo Report", "text": "Export-ready live reports with provenance, processing context, and claims in structured form." },
+      { "name": "Hedamo AI", "text": "Market readiness insights and program planning for export bodies and producer networks." },
+      { "name": "Hedamo Code", "text": "Consumer confidence at destination markets—live facts in plain language." }
+    ]
+  },
+  "benefits": {
+    "title": "Key Benefits",
+    "bullets": [
+      "Unlock premium market access with consistent data",
+      "Reduce rejection risks at import checkpoints",
+      "Enhance brand value with consumer-facing clarity",
+      "Align producer networks to global expectations"
+    ]
+  },
+  "vision": {
+    "title": "Success Vision",
+    "text": "Indian exports are synonymous with integrity and clarity—opening higher-value markets."
+  },
+  "cta": {
+    "primary": { "label": "Request Strategic Briefing", "href": "/contact?type=strategic-briefing" },
+    "secondary": { "label": "See Live Report Example", "href": "/samples/buyer" },
+    "blurb": "Live, interactive reports—policy, buyer, and consumer views."
+  }
+}

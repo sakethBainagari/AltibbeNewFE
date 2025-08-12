@@ -11,6 +11,8 @@ import CollaboratePage from './pages/v2/CommunityPage';
 import BlogMediaPage from './pages/BlogMedia';
 import ContactPage from './pages/v2/Solutionpage';
 import FooterWithHoverWipe from './components/common/FooterWipe';
+import HubPage from './pages/hedamo/services/HubPage';
+import CountryPage from './pages/hedamo/services/CountryPage';
 
 function App() {
   const [showWipe, setShowWipe] = useState(true);
@@ -29,11 +31,12 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/our-work" element={<OurWorkPage />} />
         <Route path="/hedamo" element={<HedamoPage />} />
+        <Route path="/hedamo/services" element={<HubPage />} />
+        <Route path="/hedamo/services/:country" element={<CountryPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/collaborate" element={<CollaboratePage />} />
         <Route path="/blog-media" element={<BlogMediaPage />} />
         <Route path="/contact" element={<ContactPage />} />
-
       </Routes>
       <FooterWithHoverWipe />
     </Router>

@@ -1,9 +1,11 @@
 import Hero from '../../components/v2/Homepage/Hero';
 import SplitScreenIntro from '../../components/v2/Homepage/SplitScreenIntro';
 import IntroBlurb from '../../components/v2/Homepage/IntroBlurb';
-import PoweredBy from '../../components/v2/Homepage/PoweredBy';
+// import PoweredBy from '../../components/v2/Homepage/PoweredBy';
+import MarketTiles from '../../components/v2/Homepage/MarketTiles';
 import LiveMainnetBanner from '../../components/v2/Homepage/LiveMainnetBanner';
 import Navbar from '../../components/Navbar';
+import SocialFeed from '../../components/v2/Homepage/SocialFeed';
 
 export default function HomePage() {
   return (
@@ -14,9 +16,11 @@ export default function HomePage() {
     <div className=" relative
     z-10">
     <IntroBlurb />
-        <SplitScreenIntro />
-        <PoweredBy />
-        <LiveMainnetBanner />
+  <SplitScreenIntro />
+  <MarketTiles />
+  {/* <PoweredBy /> */}
+  <LiveMainnetBanner />
+  <SocialFeed />
     </div>
     </div>
     </>

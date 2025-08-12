@@ -1,0 +1,71 @@
+{
+  "hero": {
+    "headline": "Altibbe — Innovation for Global Health Integrity",
+    "subtext": "We build systems that make trade truthful. From transparency reporting to AI policy intelligence, Altibbe partners with nations and producers to raise standards—quietly, rigorously, globally.",
+    "ctaPrimary": { "label": "Explore Our Work", "href": "/our-work" },
+    "ctaSecondary": { "label": "Contact Our Team", "href": "/contact?type=strategic-briefing" },
+    "image": "/images/about/hero_prestige.jpg"
+  },
+  "mission": {
+    "title": "Our Purpose & Principles",
+    "tagline": "Advancing Global Health Integrity",
+    "paragraphs": [
+      "Health, trade, and trust are inseparable. Altibbe creates clarity in product information so citizens, agencies, and markets can act with confidence.",
+      "We blend modern science with practical wisdom—translating complex supply chains into clear, accessible data for decision-makers and consumers.",
+      "Integrity over noise; service over spectacle. Our systems are designed to be unbiased, efficient, and globally adaptable."
+    ],
+    "values": ["Clarity", "Stewardship", "Dignity", "Rigor", "Practicality"]
+  },
+  "presence": {
+    "title": "Hubs & Reach",
+    "hubs": [
+      { "name": "United Arab Emirates", "focus": "Policy partnerships, CEPA alignment" },
+      { "name": "United States", "focus": "USDA/FDA pathways, standards alignment" },
+      { "name": "India", "focus": "Producer enablement, export readiness" },
+      { "name": "Kingdom of Saudi Arabia", "focus": "Vision 2030-aligned programs" }
+    ],
+    "cta": { "label": "Partner With Altibbe", "href": "/contact?type=partnerships" }
+  },
+  "whatWeBuild": {
+    "title": "Quiet Systems. Visible Outcomes.",
+    "cards": [
+      { "title": "Hedamo Report", "body": "Structured, multilingual transparency reports for agencies and producers.", "href": "/hedamo#report" },
+      { "title": "Hedamo AI", "body": "Intelligence for policy, import programs, and compliance planning.", "href": "/hedamo#ai" },
+      { "title": "Hedamo Code", "body": "QR-linked consumer clarity in every market.", "href": "/hedamo#code" }
+    ],
+    "cta": { "label": "Explore the Hedamo System", "href": "/hedamo" }
+  },
+  "governance": {
+    "title": "Governance, Data Care & Ethics",
+    "points": [
+      "Non-partisan & non-promotional reporting frameworks.",
+      "Data minimalism with strict handling standards.",
+      "Global adaptability to national goals and international norms."
+    ]
+  },
+  "timeline": {
+    "title": "A Measured Journey",
+    "items": [
+      { "year": "2020", "text": "Concept—clarity in product information as a public good." },
+      { "year": "2021", "text": "Early frameworks—structured reporting, multilingual access." },
+      { "year": "2023", "text": "Hedamo System—Report, AI, Code defined as one stack." },
+      { "year": "2024", "text": "Pilot deployments—agency use-cases; consumer QR experiences." },
+      { "year": "2025", "text": "Expansion—CEPA-aligned pathways and market-ready playbooks." }
+    ]
+  },
+  "leadershipNote": {
+    "title": "A Note from Our Founder",
+    "quote": "Altibbe began with a simple belief: truth should be effortless to find. Our task is to make good data usable—by ministries, by buyers, by families—so decisions are sound and dignity is preserved. We build with care, so others can lead with confidence."
+  },
+  "alliances": {
+    "title": "Working With Institutions",
+    "copy": "We collaborate with ministries, standards bodies, and nominated entities to localize Hedamo for national goals—food security, consumer protection, and export growth.",
+    "cta": { "label": "Explore Collaboration Models", "href": "/collaborate" }
+  },
+  "closingCta": {
+    "headline": "Bring Next-Generation Transparency to Your Nation",
+    "subtext": "Request a confidential briefing or explore a pilot tailored to your national objectives.",
+    "primary": { "label": "Request Strategic Briefing", "href": "/contact?type=strategic-briefing" },
+    "secondary": { "label": "Explore Hedamo", "href": "/hedamo" }
+  }
+}

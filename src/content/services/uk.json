@@ -1,0 +1,41 @@
+{
+  "hero": {
+    "title": "UK Services",
+    "headline": "UK Leadership in Food Transparency",
+    "subtext": "Live reports and AI insights for trusted, resilient supply chains.",
+    "image": "/images/services/uk_hero.jpg",
+    "accent": "gold"
+  },
+  "context": {
+    "title": "Strategic Context",
+    "paragraphs": [
+      "The UK’s food sector is a global reference for safety and standards.",
+      "Live transparency supports market access and consumer confidence."
+    ]
+  },
+  "solution": {
+    "title": "How Hedamo Aligns",
+    "items": [
+      { "name": "Hedamo Report", "text": "Live, structured reports for import programs and buyers." },
+      { "name": "Hedamo AI", "text": "Policy and program intelligence to prioritize categories and suppliers." },
+      { "name": "Hedamo Code", "text": "Consumer-facing facts at the point of choice—multilingual and consistent." }
+    ]
+  },
+  "benefits": {
+    "title": "Key Benefits",
+    "bullets": [
+      "Support food safety leadership with consistent data",
+      "Improve buyer confidence and reduce ambiguity",
+      "Strengthen consumer trust in domestic and export markets"
+    ]
+  },
+  "vision": {
+    "title": "Success Vision",
+    "text": "UK supply chains are recognized for live, trusted product information."
+  },
+  "cta": {
+    "primary": { "label": "Request Strategic Briefing", "href": "/contact?type=strategic-briefing" },
+    "secondary": { "label": "See Live Report Example", "href": "/samples/consumer" },
+    "blurb": "Live, interactive reports—policy, buyer, and consumer views."
+  }
+}

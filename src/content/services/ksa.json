@@ -1,0 +1,42 @@
+{
+  "hero": {
+    "title": "KSA Services",
+    "headline": "Accelerating Saudi Arabia’s Vision 2030 with Transparent Trade",
+    "subtext": "Live product clarity and AI insights for resilient, investment-ready supply chains.",
+    "image": "/images/services/ksa_hero.jpg",
+    "accent": "gold"
+  },
+  "context": {
+    "title": "Strategic Context",
+    "paragraphs": [
+      "Diversification goals require credible, transparent data across food and wellness categories.",
+      "Clarity strengthens both consumer trust and international investment narratives."
+    ]
+  },
+  "solution": {
+    "title": "How Hedamo Aligns",
+    "items": [
+      { "name": "Hedamo Report", "text": "Consistent, live reports for agencies and buyers—clear inputs, provenance, and context." },
+      { "name": "Hedamo AI", "text": "Program planning and risk prioritization—align initiatives to Vision 2030 outcomes." },
+      { "name": "Hedamo Code", "text": "Plain-language consumer access across retail channels—one source of truth." }
+    ]
+  },
+  "benefits": {
+    "title": "Key Benefits",
+    "bullets": [
+      "Support Vision 2030 diversification with trusted data",
+      "Attract investment with transparent supply chains",
+      "Protect consumers through accessible product facts",
+      "Accelerate import approvals with consistent information"
+    ]
+  },
+  "vision": {
+    "title": "Success Vision",
+    "text": "Saudi Arabia is recognized for transparent, resilient supply chains aligned with Vision 2030’s ambition."
+  },
+  "cta": {
+    "primary": { "label": "Request Strategic Briefing", "href": "/contact?type=strategic-briefing" },
+    "secondary": { "label": "See Live Report Example", "href": "/samples/policy" },
+    "blurb": "Live, interactive reports—policy, buyer, and consumer views."
+  }
+}

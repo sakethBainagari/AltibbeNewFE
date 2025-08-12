@@ -1,0 +1,18 @@
+{
+  "hero": {
+    "title": "Hedamo Services",
+    "headline": "Country-Ready Transparency Programs",
+    "subtext": "Tailored engagements for governments, agencies, and producers—aligned with national goals and trade pathways.",
+    "image": "/images/services/hub_hero.jpg",
+    "accent": "gold"
+  },
+  "intro": {
+    "title": "How We Work",
+    "paragraphs": [
+      "We partner with ministries and nominated entities to localize Hedamo for national objectives—food security, consumer protection, and export growth.",
+      "Every deployment uses the same transparent engine: Hedamo Report, Hedamo AI, and Hedamo Code—adapted to your goals and programs."
+    ]
+  },
+  "countriesPrimary": ["uae", "usa", "ksa", "india"],
+  "countriesSecondary": ["singapore", "japan", "uk", "germany"]
+}

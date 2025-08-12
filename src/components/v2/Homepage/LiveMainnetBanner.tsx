@@ -6,76 +6,46 @@ import { ArrowRightIcon } from '@heroicons/react/24/outline';
 export default function LiveMainnetBanner() {
   return (
     <section
-      className="relative w-full min-h-[calc(var(--vh,1vh)*70)] md:min-h-[calc(var(--vh,1vh)*80)] bg-cover bg-center z-10"
-      style={{ backgroundImage: "url('https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1920&h=1080&q=80')" }}
+      className="relative w-full min-h-[calc(var(--vh,1vh)*70)] md:min-h-[calc(var(--vh,1vh)*80)] z-10 bg-cover bg-center"
+      style={{
+        backgroundImage:
+          "url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80')" // High-end business meeting with digital dashboards
+      }}
     >
-      {/* dark overlay */}
-      <div className="absolute inset-0 bg-black/50" />
+      {/* Overlay for readability */}
+      <div className="absolute inset-0 bg-white/80" />
 
       {/* text block – top-left */}
-      <div className="absolute top-0 left-0 z-10 flex flex-col items-start p-[clamp(1rem,5vw,3rem)]">
-        <div className="flex flex-col items-start gap-2 md:gap-3 font-serif text-accent-mint">
-          {/* stacked headlines */}
-          <motion.h2 
-            initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="text-[clamp(2.25rem,5vw,4rem)] leading-none tracking-tighter"
-          >
-            Our Journey in
-          </motion.h2>
-          <motion.h2 
-            initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="text-[clamp(2.25rem,5vw,4rem)] leading-none tracking-tighter"
-          >
-            Health &
-          </motion.h2>
-          <motion.h2 
-            initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            viewport={{ once: true }}
-            className="text-[clamp(2.25rem,5vw,4rem)] leading-none tracking-tighter"
-          >
-            Transparency
-          </motion.h2>
-          <motion.h2 
-            initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            viewport={{ once: true }}
-            className="text-[clamp(2.25rem,5vw,4rem)] leading-none tracking-tighter"
-          >
-            Innovation
-          </motion.h2>
-
-          <motion.p 
-            initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 1.0 }}
-            viewport={{ once: true }}
-            className="font-sans text-base md:text-lg mt-2"
-          >
-            "Altibbe is redefining health and transparency in the post-pandemic world, empowering consumers to make informed choices."
-          </motion.p>
-
-          <h3 className="font-serif text-xl md:text-2xl mt-4">
-            2020 – The Vision | 2024 – Empowering Consumers
-          </h3>
-        </div>
-
-        {/* button – bottom-left */}
-        <a
-          href="/about"
-          className="absolute bottom-0 left-0 mb-4 ml-[clamp(1rem,5vw,3rem)] inline-flex items-center button-text text-accent-mint text-lg border-b border-accent-mint pb-1 hover:border-b-2 hover:pb-[2px] transition-all"
+      <div className="absolute top-0 left-0 z-10 flex flex-col items-start p-[clamp(1rem,5vw,3rem)] w-full max-w-3xl">
+        <motion.h2
+          initial={{ opacity: 0, y: 60, scale: 0.98 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
+          viewport={{ once: true }}
+          className="font-serif text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-[#0B5345] mb-4 drop-shadow-lg"
         >
-          OUR STORY
+          Hedamo Advisory – Precision Insights for Decision-Makers
+        </motion.h2>
+        <motion.div
+          initial={{ opacity: 0, y: 40, scale: 0.98 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
+          viewport={{ once: true }}
+          className="font-serif text-2xl md:text-3xl text-black mb-6 font-semibold"
+        >
+          Powered by Hedamo AI, our advisory service delivers tailored intelligence to national agencies, trade bodies, and producers — enabling faster, data-backed decisions.
+        </motion.div>
+        <motion.a
+          href="/hedamo/advisory"
+          initial={{ opacity: 0, y: 40, scale: 0.98 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: 0.5 }}
+          viewport={{ once: true }}
+          className="mt-2 inline-flex items-center button-text text-[#0B5345] text-lg border-b border-[#0B5345] pb-1 hover:border-b-2 hover:pb-[2px] transition-all bg-white/80 rounded-full px-6 py-2 font-semibold shadow-lg"
+        >
+          Learn About Hedamo Advisory
           <ArrowRightIcon className="ml-2 h-5 w-5" />
-        </a>
+        </motion.a>
       </div>
     </section>
   );

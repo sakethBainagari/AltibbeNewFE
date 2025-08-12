@@ -1,0 +1,41 @@
+{
+  "hero": {
+    "title": "Germany Services",
+    "headline": "German Precision in Supply Chain Transparency",
+    "subtext": "Live reports and AI insights for Europe’s most advanced supply chains.",
+    "image": "/images/services/germany_hero.jpg",
+    "accent": "gold"
+  },
+  "context": {
+    "title": "Strategic Context",
+    "paragraphs": [
+      "Germany’s supply chains are a benchmark for efficiency and quality.",
+      "Live transparency supports market access and consumer confidence across Europe."
+    ]
+  },
+  "solution": {
+    "title": "How Hedamo Aligns",
+    "items": [
+      { "name": "Hedamo Report", "text": "Live, structured reports for import programs and buyers." },
+      { "name": "Hedamo AI", "text": "Policy and program intelligence to prioritize categories and suppliers." },
+      { "name": "Hedamo Code", "text": "Consumer-facing facts at the point of choice—multilingual and consistent." }
+    ]
+  },
+  "benefits": {
+    "title": "Key Benefits",
+    "bullets": [
+      "Support supply chain leadership with consistent data",
+      "Improve buyer confidence and reduce ambiguity",
+      "Strengthen consumer trust across European markets"
+    ]
+  },
+  "vision": {
+    "title": "Success Vision",
+    "text": "Germany’s supply chains are recognized for live, trusted product information."
+  },
+  "cta": {
+    "primary": { "label": "Request Strategic Briefing", "href": "/contact?type=strategic-briefing" },
+    "secondary": { "label": "See Live Report Example", "href": "/samples/consumer" },
+    "blurb": "Live, interactive reports—policy, buyer, and consumer views."
+  }
+}

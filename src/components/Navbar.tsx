@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { ChevronDown, Menu, X } from 'lucide-react';
 
 // Smooth scroll function for anchor links
@@ -22,7 +22,7 @@ const navData = [
   {
     label: 'Our Work',
     href: '/our-work',
-    img: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=400&h=300&q=80', // Innovation/health technology
+    img: 'https://plus.unsplash.com/premium_photo-1714510332132-b3074b75a312?q=80&w=1107&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', // Innovation/health technology (replace with a more specific image if desired)
     links: [
       { label: 'Innovation Roadmap', href: '/our-work#innovation-roadmap' },
       { label: 'AI Health Solutions', href: '/our-work#ai-health-solutions' },
@@ -33,7 +33,7 @@ const navData = [
   {
     label: 'Hedamo',
     href: '/hedamo',
-    img: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=400&h=300&q=80', // Laboratory/analysis
+    img: 'https://organicabiotech.com/wp-content/uploads/2021/10/organic-farming-min.jpg', // Laboratory/analysis
     links: [
       { label: 'Hedamo System', href: '/hedamo#hedamo-system' },
       { label: 'Four Pillars of Hedamo System', href: '/hedamo#hedamo-report' },
@@ -44,7 +44,7 @@ const navData = [
   {
     label: 'About',
     href: '/about',
-    img: 'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=400&h=300&q=80', // Organic farm/mission
+    img: 'https://media.istockphoto.com/id/1400739452/vector/about-us-web-header-design-icon-interconnected-symbol-of-company-profile-corporate.jpg?s=612x612&w=0&k=20&c=-zgp-xnEqh8zBEjNajlPZmDF5PXuqlXVUu7RjBf_UGU=', // Organic farm/mission
     links: [
       { label: 'Mission & Ethos', href: '/about#mission-ethos' },
       { label: 'Timeline & Legacy', href: '/about#timeline-legacy' },
@@ -54,7 +54,7 @@ const navData = [
   {
     label: 'Blog & Media',
     href: '/blog-media',
-    img: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=400&h=300&q=80', // Blog/media content
+    img: 'https://plus.unsplash.com/premium_photo-1720744786849-a7412d24ffbf?q=80&w=1109&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', // Blog/media content
     links: [
       { label: 'Blog Posts', href: '/blog-media#blog-posts' },
       { label: 'Social Media', href: '/blog-media#social-media' },
@@ -63,7 +63,7 @@ const navData = [
   {
     label: 'Collaborate',
     href: '/collaborate',
-    img: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=400&h=300&q=80', // Partnership/collaboration
+    img: 'https://plus.unsplash.com/premium_photo-1723881617781-3251feea260c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', // Partnership/collaboration
     links: [
       { label: 'Partnership Opportunities', href: '/collaborate#partnership-opportunities' },
       { label: 'Strategic Partnerships', href: '/collaborate#partnership-opportunities' },
@@ -95,12 +95,31 @@ function useScrollHide(threshold = 60) {
 }
 
 export default function Navbar({
-  className = 'bg-[#131619]',
+  className = '',
   mobileClassName = 'bg-white',
 }) {
+  const location = useLocation();
+  const isHome = location.pathname === '/';
+  // Only allow transparency on homepage
+  const [isTransparent, setIsTransparent] = useState(isHome);
+
   const [open, setOpen] = useState(false);
   const [subOpen, setSubOpen] = useState<string | null>(null);
   const show = useScrollHide();
+
+  // Listen for scroll to toggle navbar background, but only on homepage
+  useEffect(() => {
+    if (!isHome) {
+      setIsTransparent(false);
+      return;
+    }
+    const handleScroll = () => {
+      setIsTransparent(window.scrollY < 80);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [isHome]);
 
   useEffect(() => {
     const setVh = () =>
@@ -118,15 +137,24 @@ export default function Navbar({
       {/* DESKTOP NAVBAR */}
       <nav
         className={`
-          text-accent-mint fixed top-0 left-0 right-0 z-40 h-20 mb-8
+          fixed top-0 left-0 right-0 z-40 h-20 mb-8
           transition-opacity duration-300
           ${show ? 'opacity-100' : 'opacity-0 pointer-events-none'}
-          ${className}
+          ${isTransparent ? 'bg-transparent' : 'bg-white shadow'}
+          ${isTransparent ? 'text-white' : 'text-black'}
         `}
+        style={{
+          transition: 'background 0.3s, box-shadow 0.3s',
+          boxShadow: isTransparent ? 'none' : undefined,
+        }}
       >
         <div className="max-w-7xl mx-auto px-4 flex justify-between items-center h-full">
           <Link to="/" className="flex items-center">
-            <img src="/altibbeLogo.png" alt="Altibbe Logo" className="h-12 w-auto" />
+            <img
+              src={isTransparent ? "/altibbeLogoForNavBar.png" : "/altibbeLogo.png"}
+              alt="Altibbe Logo"
+              className={isTransparent ? "h-36 w-auto transition-all duration-300" : "h-12 w-auto transition-all duration-300"}
+            />
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
@@ -139,11 +167,29 @@ export default function Navbar({
               >
                 <Link 
                   to={item.href} 
-                  className="flex items-center gap-1 font-medium py-2 hover:text-black hover:drop-shadow-lg transition-all duration-300"
+                  className={`flex items-center gap-1 font-medium py-2 transition-all duration-300
+                    ${isTransparent ? 'text-white' : 'text-black'}
+                    group
+                  `}
+                  style={{
+                    // No text-shadow by default
+                  }}
                   onClick={() => scrollToSection(item.href)}
                 >
-                  {item.label}
-                  {item.links && <ChevronDown size={16} />}
+                  <span
+                    className={``}
+                    style={{
+                      transition: 'text-shadow 0.3s',
+                    }}
+                  >
+                    {item.label}
+                  </span>
+                  {item.links && <ChevronDown size={16} color={isTransparent ? 'white' : 'black'} />}
+                  <style>{`
+                    .group:hover > span {
+                      text-shadow: ${isTransparent ? '0 0 3px #fff, 0 1px 3px #fff' : 'none'};
+                    }
+                  `}</style>
                 </Link>
 
                 {item.links && subOpen === item.label && (
@@ -173,14 +219,14 @@ export default function Navbar({
                                   href={l.href}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="block py-2 text-sm hover:underline"
+                                  className="block py-2 text-sm hover:underline text-[#131619]"
                                 >
                                   {l.label}
                                 </a>
                               ) : (
                                 <Link
                                   to={l.href}
-                                  className="block py-2 text-sm hover:underline"
+                                  className="block py-2 text-sm hover:underline text-[#131619]"
                                   onClick={() => scrollToSection(l.href)}
                                 >
                                   {l.label}
@@ -197,8 +243,8 @@ export default function Navbar({
             ))}
           </div>
 
-          <button className="md:hidden" onClick={() => setOpen(!open)} aria-label="toggle menu">
-            {open ? <X size={24} /> : <Menu size={24} />}
+          <button className={`md:hidden ${isTransparent ? 'text-white' : 'text-black'}`} onClick={() => setOpen(!open)} aria-label="toggle menu">
+            {open ? <X size={24} color={isTransparent ? 'white' : 'black'} /> : <Menu size={24} color={isTransparent ? 'white' : 'black'} />}
           </button>
         </div>
       </nav>

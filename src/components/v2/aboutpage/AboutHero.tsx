@@ -32,7 +32,7 @@ export default function AboutHero() {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=1920&h=1080&q=80')",
+          backgroundImage: "url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80')",
         }}
       />
       <div className="absolute inset-0 bg-black/70" />
@@ -52,7 +52,7 @@ export default function AboutHero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-5xl md:text-7xl font-bold text-white mb-6"
           >
-            About <em className="not-italic text-green-400">Altibbe</em>
+         <em className="not-italic text-green-400">Altibbe</em>
           </motion.h1>
           <motion.div 
             initial={{ opacity: 0, y: 50 }}
@@ -61,7 +61,8 @@ export default function AboutHero() {
             className="mb-8"
           >
             <h2 className="text-3xl md:text-4xl font-serif text-green-300 mb-4">
-              Health for Humanity
+              Innovation for Global Health Integrity
+
             </h2>
             <div className="w-24 h-1 bg-green-400 mb-6"></div>
           </motion.div>
@@ -71,10 +72,8 @@ export default function AboutHero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
             className="text-xl md:text-2xl text-white leading-relaxed mb-6"
-          >
-            Born from a vision of a healthier, more transparent world, Altibbe stands for 
-            <strong className="text-green-400"> Health for Humanity</strong> – a commitment to empower every consumer and producer 
-            through honesty, innovation, and ancient wisdom.
+          >We build systems that make trade truthful. From transparency reporting to AI policy intelligence, Altibbe partners with nations and producers to raise standards—quietly, rigorously, globally.
+
           </motion.p>
           <motion.p
             initial={{ opacity: 0, y: 50 }}
@@ -82,8 +81,7 @@ export default function AboutHero() {
             transition={{ duration: 0.8, delay: 1.0 }}
             className="text-lg text-white/90 leading-relaxed"
           >
-            We bridge the gap between ancestral health knowledge and cutting-edge technology to restore trust 
-            in what we consume, positioning Altibbe as not just a business, but a movement for good.
+         
           </motion.p>
         </motion.div>
       </div>
