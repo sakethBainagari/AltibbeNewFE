@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export default function IntroBlurb() {
   return (
-    <section className="bg-white py-12 md:py-20 px-4 sm:px-6 z-10">
+    <section className="bg-white pt-0 pb-12 md:pt-0 md:pb-20 px-4 sm:px-6 z-10">
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10">
         {/* Image */}
         <motion.div

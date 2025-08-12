@@ -58,7 +58,10 @@ const ParallaxReveal = () => {
           </div>
           {/* Foreground image with parallax and reveal */}
           <img
-            src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80"
+          //https://images.unsplash.com/photo-1613103756285-48a0c7ee6674?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+          
+        
+            src="/sunrise1.png"
             alt="Sun Parallax"
             className="absolute left-0 bottom-0 w-full h-auto max-w-none z-20 pointer-events-none select-none transition-all duration-200"
             style={{
