@@ -10,15 +10,31 @@ import CTASection from "../../components/v2/ourwork/CTASection";
 
 export default function OurWorkPage() {
   return (
-    <>
+    <div className="font-sans bg-ivory text-[#222]">
       <Navbar className="bg-white text-black pt-2" />
-      <WorkHero />
-      <ImpactMetrics />
-      <CaseStudies />
-      <HowWeWork />
-  <Testimonials />
-  <PartnersRecognition />
-  <CTASection />
-    </>
+      <main>
+        <section className="font-serif">
+          <WorkHero />
+        </section>
+        <section className="bg-white py-20">
+          <ImpactMetrics />
+        </section>
+        <section className="bg-gray-50 py-20">
+          <CaseStudies />
+        </section>
+        <section className="bg-white py-20">
+          <HowWeWork />
+        </section>
+        <section className="bg-gray-50 py-20">
+          <Testimonials />
+        </section>
+        <section className="bg-white py-20">
+          <PartnersRecognition />
+        </section>
+        <section className="bg-yellow-50 py-20">
+          <CTASection />
+        </section>
+      </main>
+    </div>
   );
 }

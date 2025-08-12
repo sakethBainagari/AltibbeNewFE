@@ -5,7 +5,7 @@ const WorkHero = () => (
     {/* Prestige white background, gold accent */}
     <img
       src="/images/ourwork/hero_montage.jpg"
-      alt="Montage of real-world deployments, data overlays, and global trade scenes."
+      alt=""
       className="absolute inset-0 w-full h-full object-cover opacity-20"
       style={{ zIndex: 0 }}
     />

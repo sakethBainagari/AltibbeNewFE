@@ -1,4 +1,5 @@
 import Hero from '../../components/v2/Homepage/Hero';
+import ParallaxReveal from '../../components/v2/Homepage/ParallaxReveal';
 import SplitScreenIntro from '../../components/v2/Homepage/SplitScreenIntro';
 import IntroBlurb from '../../components/v2/Homepage/IntroBlurb';
 // import PoweredBy from '../../components/v2/Homepage/PoweredBy';
@@ -12,7 +13,8 @@ export default function HomePage() {
     <>
     <Navbar className="bg-white text-black" />
     <div className="font-mono">
-    <Hero />
+  <Hero />
+  <ParallaxReveal />
     <div className=" relative
     z-10">
     <IntroBlurb />
