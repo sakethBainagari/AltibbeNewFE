@@ -1,12 +1,11 @@
 import { motion } from 'framer-motion';
 
-
 const WorkHero = () => (
   <section id="work-hero" className="relative w-full min-h-[420px] flex items-center justify-center bg-white text-[#0E0E0E] overflow-hidden mt-16" style={{ scrollMarginTop: '6rem' }}>
     {/* Prestige white background, gold accent */}
     <img
       src="/images/ourwork/hero_montage.jpg"
-      alt=""
+      alt="Montage of real-world deployments, data overlays, and global trade scenes."
       className="absolute inset-0 w-full h-full object-cover opacity-20"
       style={{ zIndex: 0 }}
     />

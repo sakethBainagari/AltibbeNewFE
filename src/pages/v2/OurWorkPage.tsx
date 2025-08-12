@@ -1,21 +1,24 @@
+
 import Navbar from "../../components/Navbar";
-import DigitalPlatformBlock from "../../components/v2/ourwork/DigitalPlatformBlock";
-import InnovationFoundation from "../../components/v2/ourwork/InnovationFoundation";
-import InnovationHero from "../../components/v2/ourwork/InnovationHero";
-import InnovationStats from "../../components/v2/ourwork/InnovationStats";
-import AIHealthSolutions from "../../components/v2/ourwork/AIHealthSolutions";
-import SustainableFashionBeauty from "../../components/v2/ourwork/SustainableFashionBeauty";
+import WorkHero from "../../components/v2/ourwork/WorkHero";
+import ImpactMetrics from "../../components/v2/ourwork/InnovationStats";
+import CaseStudies from "../../components/v2/ourwork/CaseStudies";
+import HowWeWork from "../../components/v2/ourwork/HowWeWork";
+import Testimonials from "../../components/v2/ourwork/Testimonials";
+import PartnersRecognition from "../../components/v2/ourwork/PartnersRecognition";
+import CTASection from "../../components/v2/ourwork/CTASection";
 
 export default function OurWorkPage() {
   return (
     <>
-    <Navbar className="bg-white text-black pt-2" />
-      <InnovationHero />
-      <InnovationStats />
-      <DigitalPlatformBlock />
-      <AIHealthSolutions />
-      <InnovationFoundation />
-      <SustainableFashionBeauty />
+      <Navbar className="bg-white text-black pt-2" />
+      <WorkHero />
+      <ImpactMetrics />
+      <CaseStudies />
+      <HowWeWork />
+  <Testimonials />
+  <PartnersRecognition />
+  <CTASection />
     </>
   );
 }
