@@ -39,10 +39,23 @@ export default function IntroBlurb() {
           </p>
           <a
             href="/about"
-            className="inline-flex items-center px-6 py-2 rounded-full bg-[#D4AF37] hover:bg-[#0B5345] text-white font-bold transition-colors duration-300 shadow-lg text-base md:text-lg"
+            className="group bg-transparent border-2 border-[#D4AF37] hover:bg-[#0B5345] transition-all duration-300 px-8 py-4 relative overflow-hidden inline-flex items-center font-bold text-[#D4AF37] hover:text-white text-base md:text-lg shadow-lg rounded-none"
+            style={{
+              fontFamily: '"Editorial New","Untitled Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+              fontWeight: 400,
+              fontSize: '21px',
+              lineHeight: '21px',
+              fontStyle: 'normal'
+            }}
           >
-            Learn About Altibbe
-            <span className="ml-2">→</span>
+            <span className="flex items-center space-x-3 w-full">
+              <span className="transform transition-transform duration-300 group-hover:translate-x-64">
+                →
+              </span>
+              <span className="transform transition-transform duration-300 group-hover:-translate-x-8">
+                Discover Health EcoSystem
+              </span>
+            </span>
           </a>
         </motion.div>
       </div>

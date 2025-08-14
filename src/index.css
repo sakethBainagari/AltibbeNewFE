@@ -42,7 +42,6 @@
   @apply bg-primary-600;
 }
 
-
 @layer components {
   /* Organic Font Pattern Typography */
   .heading-main {
@@ -110,10 +109,12 @@ html, body {
 .page-wipe {
   position: fixed;
   inset: 0;
-  background: linear-gradient(to top, #00e676, #00c853); /* green wipe */
+  background: #fff;
   z-index: 9999;
-  transform: translateY(100%);   /* starts below the viewport */
-  animation: wipeUp 0.8s ease-out forwards;
+  transform: translateY(100%);
+  animation: wipeUp 5.9s ease-out forwards;
+  filter: none !important;
+  backdrop-filter: none !important;
 }
 
 @keyframes wipeUp {

@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import BlogMediaHero from "../components/v2/blogmediapage/BlogMediaHero";
 import BlogPosts from "../components/v2/blogmediapage/BlogPosts";
-import SocialMediaFeed from "../components/v2/blogmediapage/SocialMediaFeed";
+// import SocialMediaFeed from "../components/v2/blogmediapage/SocialMediaFeed";
 
 export default function BlogMediaPage() {
   return (
@@ -10,7 +10,7 @@ export default function BlogMediaPage() {
       <main className="bg-white text-brand-text">
         <BlogMediaHero />
         <BlogPosts />
-        <SocialMediaFeed />
+  {/* <SocialMediaFeed /> removed */}
       </main>
     </>
   );

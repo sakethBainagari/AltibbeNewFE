@@ -1,6 +1,7 @@
 // SplitScreenIntro.tsx
 import React from 'react';
 import { motion } from 'framer-motion';
+import ArrowButton from '../../common/ArrowButton';
 
 export default function SplitScreenIntro() {
   return (
@@ -56,7 +57,6 @@ export default function SplitScreenIntro() {
                 <svg width="40" height="40" fill="none" stroke="#0B5345" strokeWidth="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v8M8 12h8"/></svg>
               </span>
               <h3 className="text-xl font-semibold mb-2 text-[#0B5345]">Hedamo AI</h3>
-              <p className="text-gray-700 text-base text-center">Advisory intelligence for trade policy, compliance, and market access.</p>
             </motion.div>
             {/* Hedamo Code */}
             <motion.div
@@ -74,19 +74,7 @@ export default function SplitScreenIntro() {
               <p className="text-gray-700 text-base text-center">QR-enabled gateway for consumers, retailers, and regulators.</p>
             </motion.div>
           </div>
-          <motion.a
-            href="/hedamo"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            viewport={{ once: true }}
-            className="inline-flex items-center px-8 py-4 font-semibold rounded-full transition-colors duration-300 group shadow-lg bg-transparent text-black border-2 border-black hover:bg-black hover:text-white text-lg self-center"
-          >
-            Explore Hedamo System
-            <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </motion.a>
+           {/* Button removed as requested */}
         </div>
       </div>
     </section>

@@ -27,8 +27,8 @@ export default function BlogMediaHero() {
   }, []);
 
   return (
-    <section id="blog-media" className="w-full min-h-screen" style={{ scrollMarginTop: '6rem' }}>
-      <div className="max-w-7xl mx-auto px-6 pt-20">
+    <section id="blog-media" className="w-full min-h-screen" style={{ scrollMarginTop: '8rem' }}>
+      <div className="max-w-7xl mx-auto px-6 pt-32 md:pt-40">
         {/* LEFT-ALIGNED TEXT */}
         <motion.div 
           initial={{ opacity: 0, x: -100 }}
@@ -43,8 +43,16 @@ export default function BlogMediaHero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-5xl md:text-7xl font-bold text-gray-900 mb-6"
           >
-            Insights & <em className="not-italic text-green-600">Inspiration</em>
+            Insights, Updates & Global Perspectives
           </motion.h1>
+          <motion.h2
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="text-2xl md:text-3xl font-semibold text-green-700 mb-6"
+          >
+            Explore Altibbe’s thought leadership, Hedamo breakthroughs, and market insights from around the world.
+          </motion.h2>
           <motion.p
             ref={taglineRef}
             initial={{ opacity: 0, y: 50 }}
@@ -52,55 +60,11 @@ export default function BlogMediaHero() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="mt-6 max-w-4xl text-lg md:text-xl text-gray-700 leading-relaxed mb-8"
           >
-            Stay informed with Altibbe's latest insights, research, and success stories. 
-            Our Blog & Media section brings you expert articles, industry updates, and 
-            a glimpse into our community initiatives – all driven by our mission to 
-            educate and inspire for Health for Humanity.
+            From national food security strategies to AI-driven supply chain innovation, our articles, press features, and updates offer decision-makers and industry leaders a clear view into the trends shaping global trade transparency.
           </motion.p>
-          <motion.p
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="text-lg text-gray-600 leading-relaxed"
-          >
-            This isn't just news – it's curated knowledge aligning with Altibbe's ethos, 
-            showcasing our thought leadership and active community presence.
-          </motion.p>
-        </motion.div>
-
-        {/* Content Overview */}
-        <motion.div 
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.0 }}
-          className="grid md:grid-cols-2 gap-12 mb-16"
-        >
-          <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Blog Posts</h2>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              On our blog, you'll find articles that range from science-backed wellness tips to deep dives into 
-              food transparency. Our team and guest experts share knowledge on topics like 
-              <strong className="text-green-600"> 'Time-Tested Detox Practices: The Science Behind Nature's Healing Powers'</strong> 
-              and <strong className="text-green-600">'Rediscovering Ancient Wisdom for Modern Health'</strong>, 
-              connecting the dots between tradition and innovation.
-            </p>
-            <p className="text-gray-700 leading-relaxed">
-              Whether you're curious about how blockchain can combat food fraud or looking for sustainable 
-              nutrition advice, our posts aim to enlighten and empower.
-            </p>
-          </div>
-          
-          <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Media & Community</h2>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              Beyond our articles, get a live peek into our community through our social media feed. 
-              From Instagram highlights of organic farms we visit, to quick tips and news shared on 
-              X (Twitter) and LinkedIn, the Blog & Media page keeps you connected with Altibbe in real time.
-            </p>
-            <p className="text-gray-700 leading-relaxed">
-              Follow the hashtag <strong className="text-green-600">#TransparentHealth</strong> to see our 
-              ongoing conversation about honest wellness.
-            </p>
+          <div className="flex flex-col md:flex-row gap-4 mt-8">
+            <a href="#articles" className="px-6 py-3 rounded-lg bg-green-600 text-white font-semibold shadow hover:bg-green-700 transition">Read Latest Articles →</a>
+            <a href="https://linkedin.com/company/altibbe" target="_blank" rel="noopener noreferrer" className="px-6 py-3 rounded-lg bg-blue-700 text-white font-semibold shadow hover:bg-blue-800 transition">Follow Us on LinkedIn →</a>
           </div>
         </motion.div>
 
@@ -111,36 +75,7 @@ export default function BlogMediaHero() {
           transition={{ duration: 0.8, delay: 1.2 }}
           className="w-full max-h-[60vh] overflow-hidden"
         >
-          <svg viewBox="0 0 800 400" className="w-full h-full">
-            <defs>
-              <clipPath id="organicBlogShape" clipPathUnits="userSpaceOnUse">
-                <path d="
-                  M50,80 
-                  C120,40 180,20 260,30 
-                  C340,40 400,60 480,45
-                  C560,30 620,50 720,80
-                  C750,90 780,110 800,140
-                  L800,320
-                  C780,340 740,360 680,370
-                  C620,380 560,375 480,365
-                  C400,355 340,350 260,360
-                  C180,370 120,380 60,375
-                  C30,372 10,360 0,340
-                  L0,120
-                  C15,100 30,85 50,80
-                  Z
-                " />
-              </clipPath>
-            </defs>
-
-            <image
-              href="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=800&h=400&q=80"
-              width="800"
-              height="400"
-              preserveAspectRatio="xMidYMid slice"
-              clipPath="url(#organicBlogShape)"
-            />
-          </svg>
+         
         </motion.div>
       </div>
     </section>

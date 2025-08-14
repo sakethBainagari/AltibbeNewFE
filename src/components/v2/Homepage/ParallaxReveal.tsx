@@ -28,17 +28,13 @@ const ParallaxReveal = () => {
     };
   }, [isMobile]);
 
-  // Use an ellipse/arc for the reveal instead of a circle
-  // Limit the reveal so after first scroll, only part of the sun is visible
+  // Use a circle for the reveal
   const maxReveal = 40; // percent, adjust for how much of the sun is revealed after first scroll
-  const revealHeight = Math.min(scrollProgress * maxReveal, maxReveal);
-  const baseWidth = isMobile ? 40 : 60;
-  const baseHeight = isMobile ? 10 : 18;
-  const widthMultiplier = isMobile ? 2.5 : 4.5;
-  const heightMultiplier = isMobile ? 1.2 : 2.2;
-  const ellipseWidth = baseWidth + revealHeight * widthMultiplier;
-  const ellipseHeight = baseHeight + revealHeight * heightMultiplier;
-  const clipPath = `ellipse(${ellipseWidth}% ${ellipseHeight}% at 50% 100%)`;
+  const revealRadius = Math.min(scrollProgress * maxReveal, maxReveal);
+  const baseRadius = isMobile ? 10 : 18;
+  const multiplier = isMobile ? 2.5 : 4.5;
+  const circleRadius = baseRadius + revealRadius * multiplier;
+  const clipPath = `circle(${circleRadius}% at 50% 100%)`;
 
   return (
   <section ref={sectionRef} className={`relative w-full h-screen max-h-[500px] md:max-h-[600px] overflow-hidden p-0 m-0`} style={{marginTop: 0, paddingTop: 0}}>
@@ -61,8 +57,7 @@ const ParallaxReveal = () => {
           //https://images.unsplash.com/photo-1613103756285-48a0c7ee6674?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
           
         
-            src="/sunrise1.png"
-            alt="Sun Parallax"
+            src="/sunset2.png"
             className="absolute left-0 bottom-0 w-full h-auto max-w-none z-20 pointer-events-none select-none transition-all duration-200"
             style={{
               transform: `translateY(${(1 - scrollProgress) * 120}px) scale(${1 + scrollProgress * 0.15})`,

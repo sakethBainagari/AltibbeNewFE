@@ -41,10 +41,16 @@ export default function LiveMainnetBanner() {
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: 0.5 }}
           viewport={{ once: true }}
-          className="mt-2 inline-flex items-center button-text text-[#0B5345] text-lg border-b border-[#0B5345] pb-1 hover:border-b-2 hover:pb-[2px] transition-all bg-white/80 rounded-full px-6 py-2 font-semibold shadow-lg"
+          className="mt-2 inline-flex items-center button-text text-[#0B5345] text-lg border-b border-[#0B5345] border border-black pb-1 hover:border-b-2 hover:pb-[2px] transition-all bg-white/80 rounded-none px-6 py-2 font-semibold shadow-lg group"
         >
-          Learn About Hedamo Advisory
-          <ArrowRightIcon className="ml-2 h-5 w-5" />
+          <span className="flex items-center">
+            <span className="transition-transform duration-300 group-hover:translate-x-72">
+              <ArrowRightIcon className="ml-2 h-5 w-5" />
+            </span>
+            <span className="transition-transform duration-300 group-hover:-translate-x-8">
+              Learn About Hedamo Advisory
+            </span>
+          </span>
         </motion.a>
       </div>
     </section>

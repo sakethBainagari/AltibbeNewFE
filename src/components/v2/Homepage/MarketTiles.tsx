@@ -64,7 +64,7 @@ export default function MarketTiles() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: idx * 0.1, ease: [0.22, 1, 0.36, 1] }}
               viewport={{ once: true }}
-              className={`rounded-xl p-6 shadow-md flex flex-col items-center border-2 ${country.type === 'Primary' ? 'border-[#D4AF37] bg-white' : 'border-[#0B5345] bg-[#F8F9FA]'}`}
+              className={`rounded-xl p-6 shadow-md flex flex-col items-center border-2 border-black bg-white`}
             >
               <span className="text-4xl mb-2">{country.flag}</span>
               <h3 className="text-xl font-semibold mb-1 text-[#0B5345]">{country.name}</h3>
