@@ -28,7 +28,7 @@ const ImpactAreas: React.FC = () => (
             className="group bg-neutral-50 rounded-xl shadow transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg p-8 flex flex-col items-center text-center cursor-pointer"
           >
             <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">{area.icon}</div>
-            <h3 className="text-xl font-bold mb-2 font-montserrat">{area.title}</h3>
+            <h3 className="font-poppins text-xl font-bold mb-2">{area.title}</h3>
             <p className="text-base font-poppins text-neutral-700">{area.desc}</p>
           </div>
         ))}

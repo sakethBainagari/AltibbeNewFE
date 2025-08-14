@@ -10,7 +10,7 @@ export default function CollaborationCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
-          className="font-serif text-[clamp(2rem,4vw,3rem)] font-bold text-accent-mint mb-6"
+          className="font-poppins text-[clamp(2rem,4vw,3rem)] font-bold text-accent-mint mb-6"
         >
           Let’s Build the Future of Transparency Together
         </motion.h2>
@@ -32,7 +32,7 @@ export default function CollaborationCTA() {
         >
           <a
             href="/contact"
-            className="group relative inline-flex items-center justify-center px-8 py-4 button-text text-lg text-accent-mint bg-primary-600 hover:bg-primary-500 rounded-lg transition-colors font-semibold"
+            className="font-poppins group relative inline-flex items-center justify-center px-8 py-4 button-text text-lg text-accent-mint bg-primary-600 hover:bg-primary-500 rounded-lg transition-colors font-semibold"
           >
             <span className="relative overflow-hidden">
               <span className="block transition-transform duration-300 ease-out group-hover:-translate-y-full">
@@ -45,7 +45,7 @@ export default function CollaborationCTA() {
           </a>
           <a
             href="/contact?type=pilot"
-            className="bg-transparent border-2 border-accent-mint text-accent-mint px-8 py-4 rounded-lg hover:bg-accent-mint hover:text-primary-900 transition-colors font-semibold text-lg"
+            className="font-poppins bg-transparent border-2 border-accent-mint text-accent-mint px-8 py-4 rounded-lg hover:bg-accent-mint hover:text-primary-900 transition-colors font-semibold text-lg"
           >
             Request a Pilot Program
           </a>

@@ -19,7 +19,7 @@ const GlobalAlignment: React.FC = () => (
       </svg>
     </div>
     <div className="relative z-10 max-w-5xl mx-auto px-4 text-center">
-      <h2 className="text-3xl md:text-4xl font-merriweather font-bold mb-4 drop-shadow-sm bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent">
+  <h2 className="font-poppins text-3xl md:text-4xl font-bold mb-4 drop-shadow-sm bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent">
         A Vision Shared Across Borders
       </h2>
       <p className="text-lg md:text-xl font-poppins mb-10 text-yellow-700">
@@ -32,7 +32,7 @@ const GlobalAlignment: React.FC = () => (
             className="group bg-white/90 rounded-2xl shadow-lg p-8 flex flex-col items-center border-t-4 border-yellow-300 hover:border-yellow-500 hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer"
           >
             <div className="text-5xl mb-3 group-hover:scale-110 transition-transform drop-shadow">{c.flag}</div>
-            <div className="text-xl font-bold font-montserrat mb-1 text-yellow-800 group-hover:text-yellow-600 transition-colors">{c.name}</div>
+            <div className="font-poppins text-xl font-bold mb-1 text-yellow-800 group-hover:text-yellow-600 transition-colors">{c.name}</div>
             <div className="text-base font-poppins text-neutral-700 group-hover:text-yellow-700 transition-colors text-center">{c.desc}</div>
           </div>
         ))}

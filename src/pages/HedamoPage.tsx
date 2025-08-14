@@ -86,7 +86,7 @@ export default function HedamoPage() {
         <div className="absolute inset-0 bg-emerald-900/60"></div>
         <div className="relative z-10 text-center text-white px-6">
           <AnimatedTextBorder direction="up">
-            <h1 className="font-mono text-5xl md:text-7xl drop-shadow-lg">
+            <h1 className="font-poppins text-5xl md:text-7xl drop-shadow-lg">
               Hedamo Certification & Services
             </h1>
           </AnimatedTextBorder>

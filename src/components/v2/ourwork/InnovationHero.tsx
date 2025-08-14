@@ -19,8 +19,8 @@ const WorkHero = () => (
       style={{ zIndex: 2 }}
     />
     <div className="relative z-10 max-w-3xl mx-auto px-6 py-20 text-center">
-      <h1 className="font-serif text-5xl md:text-7xl font-bold mb-2 text-yellow-500">Altibbe in Action</h1>
-      <h2 className="font-serif text-2xl md:text-3xl font-semibold mb-6 text-[#0E0E0E]">Building Trust, Delivering Clarity</h2>
+  <h1 className="font-poppins text-5xl md:text-7xl font-bold mb-2 text-yellow-500">Altibbe in Action</h1>
+  <h2 className="font-poppins text-2xl md:text-3xl font-semibold mb-6 text-[#0E0E0E]">Building Trust, Delivering Clarity</h2>
       <p className="text-lg md:text-2xl text-gray-700 mb-8 max-w-2xl mx-auto">
         From national transparency programs to AI-driven policy tools, our work advances health integrity and market confidence worldwide.
       </p>

@@ -9,7 +9,7 @@ const features = [
 const LiveReports: React.FC = () => (
   <section className="py-20 bg-gradient-to-b from-yellow-50/60 to-white">
     <div className="max-w-4xl mx-auto px-4 text-center">
-      <h2 className="text-3xl md:text-4xl font-merriweather font-bold mb-4 drop-shadow-sm bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent">
+  <h2 className="font-poppins text-3xl md:text-4xl font-bold mb-4 drop-shadow-sm bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent">
         Always On. Always Up-to-Date.
       </h2>
       <p className="text-lg md:text-xl font-poppins mb-10 text-yellow-800">
@@ -18,7 +18,7 @@ const LiveReports: React.FC = () => (
       <div className="flex flex-col md:flex-row justify-center gap-8">
         {features.map(f => (
           <div key={f} className="flex-1 min-w-[220px] bg-white rounded-xl shadow-lg px-6 py-6 mb-4 md:mb-0 border-t-4 border-yellow-300 hover:border-yellow-500 transition-all duration-300">
-            <span className="font-montserrat text-lg text-yellow-700 font-semibold block mb-2">{f}</span>
+            <span className="font-poppins text-lg text-yellow-700 font-semibold block mb-2">{f}</span>
           </div>
         ))}
       </div>

@@ -52,7 +52,7 @@ const BrandAssets = () => {
                 href={href}
                 target={href.startsWith("http") ? "_blank" : undefined}
                 rel="noopener noreferrer"
-                className="group relative inline-flex items-center justify-center w-full px-6 py-3 font-sans text-base tracking-tight bg-pink-400 transition-all duration-300 rounded-b-lg"
+                className="font-poppins group relative inline-flex items-center justify-center w-full px-6 py-3 text-base tracking-tight bg-pink-400 transition-all duration-300 rounded-b-lg"
               >
                 <span className="relative overflow-hidden text-black font-medium">
                   <span className="block transition-transform duration-300 ease-out group-hover:-translate-y-full">

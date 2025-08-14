@@ -13,11 +13,11 @@ const NetworkHero = () => (
     <div className="max-w-7xl mx-auto grid md:grid-cols-2 items-stretch min-h-[70vh] md:min-h-[80vh] mb-8">
       {/* Left side – text centered vertically */}
       <div className="flex flex-col justify-center px-6 py-12 md:py-24">
-        <h1 className="font-mono text-4xl md:text-6xl lg:text-7xl font-bold leading-none">
+  <h1 className="font-poppins text-4xl md:text-6xl lg:text-7xl font-bold leading-none">
           <span className="block">XDC Network</span>
           <em className="block italic">A channel to build and connect</em>
         </h1>
-        <p className="mt-6 font-sans text-lg md:text-xl max-w-lg leading-relaxed">
+  <p className="mt-6 font-poppins text-lg md:text-xl max-w-lg leading-relaxed">
           As a decentralized public ledger, the Layer 1 XDC Network enables
           information transparency and provides a distributed, universal ledger
           of truth — unburdened by central administrative controls or a single

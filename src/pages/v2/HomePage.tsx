@@ -12,7 +12,7 @@ export default function HomePage() {
   return (
     <>
     <Navbar className="bg-white text-black" />
-    <div className="font-mono">
+  <div className="font-poppins">
   <Hero />
   <ParallaxReveal />
     <div className=" relative

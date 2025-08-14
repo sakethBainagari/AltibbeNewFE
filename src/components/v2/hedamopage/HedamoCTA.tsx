@@ -32,7 +32,7 @@ export default function HedamoCTA() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="font-serif text-[clamp(2rem,4vw,3rem)] font-bold text-green-800 mb-6">
+          <h2 className="font-poppins text-[clamp(2rem,4vw,3rem)] font-bold text-green-800 mb-6">
             Ready to differentiate your product <br />
             with a Hedamo Review?
           </h2>
@@ -79,7 +79,7 @@ export default function HedamoCTA() {
           viewport={{ once: true }}
           className="bg-white rounded-2xl p-8 mb-12"
         >
-          <h3 className="font-serif text-2xl font-bold text-green-800 mb-6 text-center">
+          <h3 className="font-poppins text-2xl font-bold text-green-800 mb-6 text-center">
             For Consumers: Look for Hedamo Labels
           </h3>
           
@@ -120,7 +120,7 @@ export default function HedamoCTA() {
           viewport={{ once: true }}
           className="bg-white rounded-2xl p-8"
         >
-          <h3 className="font-serif text-2xl font-bold text-green-800 mb-6 text-center">
+          <h3 className="font-poppins text-2xl font-bold text-green-800 mb-6 text-center">
             Why Hedamo? Frequently Asked Questions
           </h3>
           <p className="text-center text-gray-600 mb-6 max-w-2xl mx-auto">
@@ -152,7 +152,7 @@ export default function HedamoCTA() {
           viewport={{ once: true }}
           className="text-center mt-12"
         >
-          <h3 className="font-serif text-xl font-bold text-green-800 mb-4">
+          <h3 className="font-poppins text-xl font-bold text-green-800 mb-4">
             Anchoring the Future
           </h3>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">

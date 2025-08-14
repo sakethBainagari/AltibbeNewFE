@@ -12,10 +12,10 @@ const OurWorkHero: React.FC = () => (
     />
     <div className="absolute inset-0 bg-gradient-to-b from-white/80 to-white/90 z-10" />
     <div className="relative z-20 text-center px-4 max-w-2xl mx-auto">
-      <h1 className="text-4xl md:text-6xl font-merriweather font-bold mb-4 drop-shadow-lg bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent">
+  <h1 className="font-poppins text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent">
         Our Work – Turning Transparency into Trust
       </h1>
-      <h2 className="text-xl md:text-2xl font-montserrat mb-4 text-yellow-700 font-semibold">
+  <h2 className="font-poppins text-xl md:text-2xl mb-4 text-yellow-700 font-semibold">
         At Altibbe, we are redefining how the world sees food, wellness, and supply chain integrity.
       </h2>
       <p className="text-lg md:text-xl font-poppins text-yellow-800">

@@ -29,8 +29,8 @@ export default function MarketTiles({ primary, secondary, baseHref = '/hedamo/se
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
           viewport={{ once: true }}
-          className="text-3xl md:text-4xl font-bold mb-10 text-[#0B5345]"
-          style={{ fontFamily: 'Inter, sans-serif' }}
+          className="font-poppins text-4xl md:text-5xl font-bold mb-10 text-[#0B5345]"
+          style={{ fontFamily: 'Poppins, sans-serif' }}
         >
           Services by Region
         </motion.h2>
@@ -48,11 +48,12 @@ export default function MarketTiles({ primary, secondary, baseHref = '/hedamo/se
                 className={`rounded-xl p-7 shadow-md flex flex-col items-center border-2 ${primary.includes(code) ? 'border-[#D4AF37] bg-white' : 'border-[#0B5345] bg-[#F8F9FA]'}`}
               >
                 <span className="text-5xl mb-3">{c.flag}</span>
-                <h3 className="text-xl font-semibold mb-1 text-[#0B5345]">{c.name}</h3>
-                <p className="text-gray-700 text-base mb-4">{c.description}</p>
+                <h3 className="font-poppins text-xl md:text-2xl font-bold mb-1 text-[#0B5345]" style={{ fontFamily: 'Poppins, sans-serif' }}>{c.name}</h3>
+                <p className="font-poppins text-base md:text-lg text-gray-700 mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>{c.description}</p>
                 <a
                   href={`${baseHref.replace(/\/$/, '')}/${code}`}
-                  className="mt-auto inline-block px-5 py-2 rounded-full bg-[#0B5345] text-white font-semibold shadow hover:bg-[#176655] transition"
+                  className="font-poppins mt-auto inline-block px-5 py-2 rounded-full bg-[#0B5345] text-white font-semibold shadow hover:bg-[#176655] transition"
+                  style={{ fontFamily: 'Poppins, sans-serif' }}
                 >
                   Explore {c.name} Strategy &rarr;
                 </a>

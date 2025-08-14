@@ -73,8 +73,8 @@ export default function Hero() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-5xl md:text-7xl font-serif font-bold mb-6 text-white drop-shadow-lg"
-            style={{ color: '#fff', textShadow: '0 2px 8px #000a, 0 1px 0 #D4AF37' }}
+            className="font-poppins text-5xl md:text-7xl font-bold mb-6 text-white drop-shadow-lg"
+            style={{ color: '#fff', textShadow: '0 2px 8px #000a, 0 1px 0 #D4AF37', fontFamily: 'Poppins, sans-serif', fontWeight: 700 }}
           >
             {slides[currentIndex].headline}
           </motion.h1>
@@ -84,8 +84,8 @@ export default function Hero() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl md:text-2xl font-sans text-white leading-relaxed mb-8 max-w-4xl mx-auto drop-shadow"
-            style={{ color: '#fff', textShadow: '0 1px 4px #000a' }}
+            className="font-poppins text-xl md:text-2xl text-white leading-relaxed mb-8 max-w-4xl mx-auto drop-shadow"
+            style={{ color: '#fff', textShadow: '0 1px 4px #000a', fontFamily: 'Poppins, sans-serif', fontWeight: 500 }}
           >
             {slides[currentIndex].subtext}
           </motion.p>

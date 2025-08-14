@@ -13,7 +13,7 @@ export default function CTASection() {
           </div>
           <div className="w-20 h-1 bg-yellow-400 rounded-full mb-4" />
         </div>
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-yellow-600 font-serif">
+  <h2 className="font-poppins text-3xl md:text-4xl font-bold mb-4 text-yellow-600">
           Ready to Advance Health Integrity?
         </h2>
         <p className="text-lg text-gray-800 mb-10">

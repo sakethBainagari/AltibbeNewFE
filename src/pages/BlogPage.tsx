@@ -120,7 +120,7 @@ export default function BlogPage() {
                 />
               </div>
               <div className="flex flex-col justify-center">
-                <p className="text-emerald-600 font-mono text-sm tracking-widest">
+                <p className="text-emerald-600 font-poppins text-sm tracking-widest">
                   {post.date} • {post.category}
                 </p>
                 <h2 className="mt-2 text-3xl font-bold text-gray-900">

@@ -112,7 +112,7 @@ export default function HedamoPillars() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="font-serif text-[clamp(2.5rem,4vw,3.5rem)] font-bold text-primary-800 mb-4">
+          <h2 className="font-poppins text-[clamp(2.5rem,4vw,3.5rem)] font-bold text-primary-800 mb-4">
             Five Pillars of Hedamo System
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -142,7 +142,7 @@ export default function HedamoPillars() {
                   </div>
                 </div>
                 <div className="flex-grow">
-                  <h3 className={`font-serif text-xl font-bold mb-1 ${pillar.color}`}>{pillar.title}</h3>
+                  <h3 className={`font-poppins text-xl font-bold mb-1 ${pillar.color}`}>{pillar.title}</h3>
                   <p className="text-sm text-gray-500 font-medium">{pillar.subtitle}</p>
                 </div>
               </div>

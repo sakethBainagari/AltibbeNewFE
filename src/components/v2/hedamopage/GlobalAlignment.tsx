@@ -63,7 +63,7 @@ export default function GlobalAlignment() {
             viewport={{ once: true }}
             className="text-center"
           >
-            <h2 className="font-serif text-[clamp(2.5rem,4vw,3.5rem)] font-bold text-white mb-4">
+            <h2 className="font-poppins text-[clamp(2.5rem,4vw,3.5rem)] font-bold text-white mb-4">
               Global Market Adaptation
             </h2>
             <p className="text-xl text-white/90 max-w-4xl mx-auto leading-relaxed mb-6">
@@ -88,7 +88,7 @@ export default function GlobalAlignment() {
                 className="bg-green-50 rounded-2xl p-8 flex flex-col border border-green-200 hover:bg-green-100 transition-colors"
               >
                 <div className="mb-4">
-                  <h3 className="font-serif text-2xl font-bold mb-2 text-green-800">{market.title}</h3>
+                  <h3 className="font-poppins text-2xl font-bold mb-2 text-green-800">{market.title}</h3>
                   <p className="text-sm font-medium text-green-600 mb-3">{market.subtitle}</p>
                   <div className="inline-block bg-green-600 text-white px-3 py-1 rounded-full text-xs font-medium">
                     {market.stats}
@@ -122,7 +122,7 @@ export default function GlobalAlignment() {
             viewport={{ once: true }}
             className="bg-green-50 rounded-2xl p-8 max-w-4xl mx-auto border-l-4 border-green-600"
           >
-            <h3 className="font-serif text-2xl font-bold text-green-800 mb-4">Import-Reliant Nations Leverage</h3>
+            <h3 className="font-poppins text-2xl font-bold text-green-800 mb-4">Import-Reliant Nations Leverage</h3>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
               This also means import-reliant nations can confidently leverage their buyer power to demand Hedamo-level 
               transparency on incoming goods, knowing the system will uphold their national standards and food security goals.
@@ -161,7 +161,7 @@ export default function GlobalAlignment() {
             viewport={{ once: true }}
             className="text-center"
           >
-            <h3 className="font-serif text-xl font-bold text-accent-mint mb-4">
+            <h3 className="font-poppins text-xl font-bold text-accent-mint mb-4">
               Hedamo's Regional Expertise
             </h3>
             <p className="text-accent-mint/80 max-w-2xl mx-auto">

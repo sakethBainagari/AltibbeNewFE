@@ -32,7 +32,7 @@ export default function ContactHero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="text-4xl md:text-5xl font-bold text-yellow-900 mb-4 font-serif"
+          className="font-poppins text-4xl md:text-5xl font-bold text-yellow-900 mb-4"
         >
           Let’s Start the Conversation
         </motion.h1>
@@ -40,7 +40,7 @@ export default function ContactHero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9 }}
-          className="text-xl md:text-2xl text-yellow-800 mb-6 font-medium"
+          className="font-poppins text-xl md:text-2xl text-yellow-800 mb-6 font-medium"
         >
           From government agencies to global producers, we’re here to explore how transparency can work for your goals.
         </motion.h2>

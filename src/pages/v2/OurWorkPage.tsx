@@ -9,7 +9,7 @@ import CaseStudies from "../../components/v2/ourwork/CaseStudies.tsx";
 
 export default function OurWorkPage() {
   return (
-    <div className="font-sans bg-gradient-to-b from-[#f8fafc] via-[#e0e7ef] to-[#f8fafc] min-h-screen text-[#222]">
+  <div className="font-poppins bg-gradient-to-b from-[#f8fafc] via-[#e0e7ef] to-[#f8fafc] min-h-screen text-[#222]">
       <Navbar className="bg-white/90 backdrop-blur text-black pt-2 shadow-sm sticky top-0 z-30" />
       <main>
         <section className="relative">

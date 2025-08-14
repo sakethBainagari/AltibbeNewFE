@@ -38,7 +38,7 @@ export default function OnSiteVerification() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
             viewport={{ once: true }}
-            className="font-serif text-[clamp(1.75rem,3vw,2.5rem)] leading-tight mb-6"
+            className="font-poppins text-[clamp(1.75rem,3vw,2.5rem)] leading-tight mb-6"
           >
             On-Site Verification & <em className="not-italic text-green-300">Field Audits</em>
           </motion.h2>
