@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { ChevronDown, Menu, X } from 'lucide-react';
 
 // Smooth scroll function for anchor links
-const scrollToSection = (href: string) => {
-  const hash = href.split('#')[1];
+const scrollToSection = (hash: string) => {
   if (hash) {
     const element = document.getElementById(hash);
     if (element) {
@@ -22,12 +21,12 @@ const navData = [
   {
     label: 'Our Work',
     href: '/our-work',
-    img: 'https://plus.unsplash.com/premium_photo-1714510332132-b3074b75a312?q=80&w=1107&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', // Innovation/health technology (replace with a more specific image if desired)
+    img: 'https://plus.unsplash.com/premium_photo-1714510332132-b3074b75a312?q=80&w=1107&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     links: [
-      { label: 'Innovation Roadmap', href: '/our-work#innovation-roadmap' },
-      { label: 'AI Health Solutions', href: '/our-work#ai-health-solutions' },
-      { label: 'Natural Supplements', href: '/our-work#natural-supplements' },
-      { label: 'Sustainable Fashion', href: '/our-work#sustainable-fashion' },
+      { label: 'Impact Areas', href: '/our-work#impact-areas' },
+      { label: 'Real-Time Intelligence', href: '/our-work#live-reports' },
+      { label: 'Global Alignment', href: '/our-work#global-alignment' },
+      { label: 'Case Studies', href: '/our-work#case-studies' },
     ],
   },
   {
@@ -35,10 +34,14 @@ const navData = [
     href: '/hedamo',
     img: 'https://organicabiotech.com/wp-content/uploads/2021/10/organic-farming-min.jpg', // Laboratory/analysis
     links: [
-      { label: 'Hedamo System', href: '/hedamo#hedamo-system' },
-      { label: 'Four Pillars of Hedamo System', href: '/hedamo#hedamo-report' },
-      { label: 'Global Alignment', href: '/hedamo#global-alignment' },
-      { label: 'On-Site Verification', href: '/hedamo#on-site-verification' },
+      { label: 'Pillars of Hedamo', href: '/hedamo#pillars-of-hedamo' },
+      { label: 'System Architecture', href: '/hedamo#system-architecture' },
+      { label: 'Stakeholder Solution', href: '/hedamo#stakeholder-solution' },
+      { label: 'Global Presence', href: '/hedamo#global-presence' },
+      { label: 'Hedamo Advisory', href: '/hedamo#hedamo-advisory' },
+      { label: 'Governance', href: '/hedamo#governance' },
+      { label: 'Hedamo Report', href: '/hedamo#hedamo-report' },
+      { label: 'Integration', href: '/hedamo#integration' },
     ],
   },
   {
@@ -47,8 +50,10 @@ const navData = [
     img: 'https://media.istockphoto.com/id/1400739452/vector/about-us-web-header-design-icon-interconnected-symbol-of-company-profile-corporate.jpg?s=612x612&w=0&k=20&c=-zgp-xnEqh8zBEjNajlPZmDF5PXuqlXVUu7RjBf_UGU=', // Organic farm/mission
     links: [
       { label: 'Mission & Ethos', href: '/about#mission-ethos' },
-      { label: 'Timeline & Legacy', href: '/about#timeline-legacy' },
-      { label: 'Global Presence', href: '/about#global-presence' },
+      { label: 'Hubs & Research', href: '/about#hubs-research' },
+      { label: 'Hedamo Systems', href: '/about#hedamo-systems' },
+      { label: 'Governance', href: '/about#governance' },
+      { label: 'Journey', href: '/about#journey' },
     ],
   },
   {
@@ -56,8 +61,9 @@ const navData = [
     href: '/blog-media',
     img: 'https://plus.unsplash.com/premium_photo-1720744786849-a7412d24ffbf?q=80&w=1109&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', // Blog/media content
     links: [
-      { label: 'Blog Posts', href: '/blog-media#blog-posts' },
-      { label: 'Social Media', href: '/blog-media#social-media' },
+      { label: 'Featured Article', href: '/blog-media#featured-article' },
+      { label: 'Latest Articles', href: '/blog-media#latest-articles' },
+      { label: 'Media & Press', href: '/blog-media#media-press' },
     ],
   },
   {
@@ -65,10 +71,10 @@ const navData = [
     href: '/collaborate',
     img: 'https://plus.unsplash.com/premium_photo-1723881617781-3251feea260c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', // Partnership/collaboration
     links: [
-      { label: 'Partnership Opportunities', href: '/collaborate#partnership-opportunities' },
-      { label: 'Strategic Partnerships', href: '/collaborate#partnership-opportunities' },
-      { label: 'Government Alliances', href: '/collaborate#partnership-opportunities' },
-      { label: 'Producer Engagement', href: '/collaborate#partnership-opportunities' },
+      { label: 'Strategic Partners', href: '/collaborate#strategic-partners' },
+      { label: 'Why Collaborate', href: '/collaborate#why-collaborate' },
+      { label: 'Flexible Engagement', href: '/collaborate#flexible-engagement' },
+      { label: 'Priority Regions', href: '/collaborate#priority-regions' },
     ],
   },
   {
@@ -99,6 +105,7 @@ export default function Navbar({
   mobileClassName = 'bg-white',
 }) {
   const location = useLocation();
+  const navigate = useNavigate();
   const isHome = location.pathname === '/';
   // Only allow transparency on homepage
   const [isTransparent, setIsTransparent] = useState(isHome);
@@ -106,6 +113,34 @@ export default function Navbar({
   const [open, setOpen] = useState(false);
   const [subOpen, setSubOpen] = useState<string | null>(null);
   const show = useScrollHide();
+
+  // Scroll to anchor after route change
+  useEffect(() => {
+    if (location.state && location.state.scrollToHash) {
+      const id = location.state.scrollToHash;
+      setTimeout(() => {
+        scrollToSection(id);
+      }, 100);
+    } else if (location.hash) {
+      const id = location.hash.replace('#', '');
+      setTimeout(() => {
+        scrollToSection(id);
+      }, 100);
+    }
+  }, [location]);
+
+  // Smooth scroll to anchor after route change
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace('#', '');
+      setTimeout(() => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    }
+  }, [location]);
 
   // Listen for scroll to toggle navbar background, but only on homepage
   useEffect(() => {
@@ -224,13 +259,20 @@ export default function Navbar({
                                   {l.label}
                                 </a>
                               ) : (
-                                <Link
-                                  to={l.href}
-                                  className="block py-2 text-sm hover:underline text-[#131619]"
-                                  onClick={() => scrollToSection(l.href)}
+                                <button
+                                  className="block py-2 text-sm hover:underline text-[#131619] w-full text-left"
+                                  onClick={() => {
+                                    setSubOpen(null);
+                                    const [pathname, hash] = l.href.split('#');
+                                    if (location.pathname !== pathname) {
+                                      navigate(pathname + (hash ? '#' + hash : ''), { state: { scrollToHash: hash } });
+                                    } else {
+                                      scrollToSection(hash);
+                                    }
+                                  }}
                                 >
                                   {l.label}
-                                </Link>
+                                </button>
                               )}
                             </li>
                           );
@@ -305,16 +347,21 @@ export default function Navbar({
                             {l.label}
                           </a>
                         ) : (
-                          <Link
-                            to={l.href}
-                            className="block py-2"
+                          <button
+                            className="block py-2 w-full text-left"
                             onClick={() => {
+                              setSubOpen(null);
                               setOpen(false);
-                              scrollToSection(l.href);
+                              const [pathname, hash] = l.href.split('#');
+                              if (location.pathname !== pathname) {
+                                navigate(pathname + (hash ? '#' + hash : ''), { state: { scrollToHash: hash } });
+                              } else {
+                                scrollToSection(hash);
+                              }
                             }}
                           >
                             {l.label}
-                          </Link>
+                          </button>
                         )}
                       </li>
                     );

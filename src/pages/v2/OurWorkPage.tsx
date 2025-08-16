@@ -9,22 +9,27 @@ import CaseStudies from "../../components/v2/ourwork/CaseStudies.tsx";
 
 export default function OurWorkPage() {
   return (
-  <div className="font-poppins bg-gradient-to-b from-[#f8fafc] via-[#e0e7ef] to-[#f8fafc] min-h-screen text-[#222]">
+  <div className="font-poppins bg-white min-h-screen text-[#222]">
       <Navbar className="bg-white/90 backdrop-blur text-black pt-2 shadow-sm sticky top-0 z-30" />
       <main>
-        <section className="relative">
+        {/* Hero Section with fade-in animation */}
+  <section className="relative animate-fade-in bg-white">
           <OurWorkHero />
         </section>
-        <section className="relative z-10 py-16 bg-white/80 backdrop-blur-sm border-b border-neutral-200">
+        {/* Impact Areas with elegant spacing and divider */}
+  <section className="relative z-10 py-20 bg-white shadow-lg animate-fade-in delay-100">
           <ImpactAreas />
         </section>
-        <section className="relative z-10 py-16 bg-gradient-to-b from-blue-50/60 to-white/80 border-b border-neutral-200">
+        {/* Live Reports with premium gradient and divider */}
+  <section className="relative z-10 py-20 bg-white shadow-lg animate-fade-in delay-200">
           <LiveReports />
         </section>
-        <section className="relative z-10 py-16 bg-white/80 backdrop-blur-sm border-b border-neutral-200">
+        {/* Global Alignment with elegant spacing and divider */}
+  <section className="relative z-10 py-20 bg-white shadow-lg animate-fade-in delay-300">
           <GlobalAlignment />
         </section>
-        <section className="relative z-10 py-16 bg-gradient-to-b from-white/80 to-blue-50/60">
+        {/* Case Studies with premium gradient */}
+  <section className="relative z-10 py-20 bg-white shadow-lg animate-fade-in delay-400">
           <CaseStudies />
         </section>
       </main>

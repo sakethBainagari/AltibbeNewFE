@@ -19,92 +19,55 @@ export default function FooterWithHoverWipe() {
       {/* 3️⃣ content layer */}
       <div className="relative z-10 max-w-7xl mx-auto px-[clamp(1rem,5vw,3rem)] py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
-          {/* any text now becomes white on hover */}
           <div>
-            <h3 className="font-semibold text-lg mb-4 group-hover:text-white transition-colors">
-              ABOUT XDC
-            </h3>
+            <h3 className="font-semibold text-lg mb-4 group-hover:text-white transition-colors">ABOUT ALTIBBE</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="/history" className="group-hover:text-white transition-colors">
-                  History
-                </a>
+                <a href="/about" className="group-hover:text-white transition-colors">About Us →</a>
               </li>
               <li>
-                <a href="/brand" className="group-hover:text-white transition-colors">
-                  Brand Assets
-                </a>
+                <span className="group-hover:text-white transition-colors">hedamo</span>
               </li>
             </ul>
           </div>
-
-          {/* repeat the same pattern for every text element */}
           <div>
-            <h3 className="font-semibold text-lg mb-4 group-hover:text-white transition-colors">
-              RESOURCES
-            </h3>
+            <h3 className="font-semibold text-lg mb-4 group-hover:text-white transition-colors">RESOURCES</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="/ecosystem" className="group-hover:text-white transition-colors">
-                  Ecosystem
-                </a>
+                <a href="/ourwork" className="group-hover:text-white transition-colors">Our Work →</a>
+              </li>
+              <li>
+                <a href="/blog" className="group-hover:text-white transition-colors">Blog & Media →</a>
               </li>
             </ul>
           </div>
-
           <div>
-            <h3 className="font-semibold text-lg mb-4 group-hover:text-white transition-colors">
-              USE XDC
-            </h3>
+            <h3 className="font-semibold text-lg mb-4 group-hover:text-white transition-colors">USE HEDAMO</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="/get-in-touch" className="group-hover:text-white transition-colors">
-                  Get in touch
-                </a>
+                <a href="/hedamo" className="group-hover:text-white transition-colors">Hedamo System →</a>
               </li>
               <li>
-                <a
-                  href="https://xdc.dev"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group-hover:text-white transition-colors"
-                >
-                  XDC.dev
-                </a>
+                <a href="/collaborate" className="group-hover:text-white transition-colors">Collaborate →</a>
+              </li>
+              <li>
+                <a href="/contact" className="group-hover:text-white transition-colors">Contact Us →</a>
               </li>
             </ul>
           </div>
-
           <div>
-            <h3 className="font-semibold text-lg mb-4 group-hover:text-white transition-colors">
-              Stay Updated
-            </h3>
-            <p className="text-sm mb-3 group-hover:text-white transition-colors">
-              Sign up for important XDC Network announcements & developments at XDC Foundation.
-            </p>
-            <form className="flex flex-col sm:flex-row gap-2">
-              <input
-                type="email"
-                placeholder="Enter email address"
-                className="flex-1 px-3 py-2 text-sm border border-gray-300 rounded-md
-                           group-hover:border-white/50 group-hover:text-white
-                           transition-colors"
-              />
-              <button className="px-4 py-2 text-sm bg-[#9FF3FF] text-[#131619] rounded-md font-semibold">
-                Subscribe
-              </button>
-            </form>
-            <div className="mt-4 text-xs space-x-4">
-              <a href="/privacy" className="group-hover:text-white transition-colors">
-                Privacy
-              </a>
-              <a href="/pr-support" className="group-hover:text-white transition-colors">
-                PR Support
-              </a>
-              <a href="/forum" className="group-hover:text-white transition-colors">
-                Forum
-              </a>
-            </div>
+            <h3 className="font-semibold text-lg mb-4 group-hover:text-white transition-colors">GET IN TOUCH</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <span className="group-hover:text-white transition-colors">Email: contact@altibbe.com</span>
+              </li>
+              <li>
+                <a href="https://linkedin.com/company/altibbe" target="_blank" rel="noopener noreferrer" className="group-hover:text-white transition-colors">LinkedIn →</a>
+              </li>
+              <li>
+                <a href="https://instagram.com/altibbe" target="_blank" rel="noopener noreferrer" className="group-hover:text-white transition-colors">Instagram →</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

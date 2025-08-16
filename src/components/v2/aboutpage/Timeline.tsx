@@ -18,32 +18,39 @@ const timelineEvents = [
     side: 'right',
   },
   {
+    year: '2022',
+    blurb: 'Prototyping and validation—real-world pilots and stakeholder feedback.',
+    icon: '🧪',
+    color: 'bg-white border-[#E6C77B] text-[#E6C77B]',
+    side: 'left',
+  },
+  {
     year: '2023',
     blurb: 'Hedamo System—Report, AI, Code defined as one stack.',
     icon: '�️',
     color: 'bg-white border-[#E6C77B] text-[#E6C77B]',
-    side: 'left',
+    side: 'right',
   },
   {
     year: '2024',
     blurb: 'Pilot deployments—importer/agency use-cases; consumer QR experiences.',
     icon: '📱',
     color: 'bg-white border-[#E6C77B] text-[#E6C77B]',
-    side: 'right',
+    side: 'left',
   },
   {
     year: '2025',
     blurb: 'Expansion—country pages, CEPA-aligned pathways, market-ready playbooks.',
     icon: '🌍',
     color: 'bg-white border-[#E6C77B] text-[#E6C77B]',
-    side: 'left',
+    side: 'right',
   },
 ];
 
 
 export default function Timeline() {
   return (
-    <section id="timeline-milestones" className="py-20 px-6 bg-white" style={{ scrollMarginTop: '6rem' }}>
+    <section id="journey" className="py-20 px-6 bg-white" style={{ scrollMarginTop: '6rem' }}>
       <div className="max-w-4xl mx-auto">
         {/* Section Header */}
         <motion.div
@@ -60,8 +67,11 @@ export default function Timeline() {
 
         {/* Gold Timeline */}
         <div className="relative">
-          {/* Gold Vertical Line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-[#E6C77B] to-[#bfa14a] rounded-full"></div>
+          {/* Gold Vertical Line only for timeline events */}
+          <div
+            className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-[#E6C77B] to-[#bfa14a] rounded-full"
+            style={{ top: 0, bottom: '120px', height: 'calc(100% - 120px)' }}
+          ></div>
           <div className="space-y-16">
             {timelineEvents.map((event, idx) => (
               <motion.div
@@ -92,6 +102,12 @@ export default function Timeline() {
                 <div className="hidden md:block w-5/12"></div>
               </motion.div>
             ))}
+            {/* Add gap before summary sentence */}
+            <div className="h-12" />
+            {/* Summary sentence below previous years */}
+            <div className="text-center mt-8 text-lg text-gray-700 font-medium">
+              <span>Each year built on the last, moving from concept and frameworks to real-world validation and stakeholder impact.</span>
+            </div>
           </div>
         </div>
       </div>
